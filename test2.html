@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Add your preferred styles for the navigation bar here */
+    ul.navbar {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      background-color: #f0f0f0;
+    }
+
+    li.nav-item {
+      flex: 1;
+      text-align: center;
+    }
+
+    button.nav-link {
+      padding: 10px 20px;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+    }
+
+    button.active {
+      background-color: #4CAF50; /* Change to your preferred active tab color */
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <ul class="navbar">
+    <li class="nav-item">
+      <button class="nav-link" onclick="changeTab(0)">Tab 1</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link" onclick="changeTab(1)">Tab 2</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link" onclick="changeTab(2)">Tab 3</button>
+    </li>
+  </ul>
+
+  <script>
+    // JavaScript to handle changing the active tab
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function changeTab(index) {
+      for (let i = 0; i < navLinks.length; i++) {
+        if (i === index) {
+          navLinks[i].classList.add('active');
+        } else {
+          navLinks[i].classList.remove('active');
+        }
+      }
+    }
+  </script>
+</body>
+</html>

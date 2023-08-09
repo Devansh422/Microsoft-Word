@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Word</title>
+	<link rel="stylesheet" href="fabric-icons.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="main-container">
+		<div class="navigation">
+			<div class="navbar">
+				<ul class="navbuttons">
+					<li><button class="navbtns" id="file">File</button></li>
+					<li><button class="navbtns active" onclick="changeColor(0)" id="home" >Home</button></li>
+					<li><button class="navbtns" onclick="changeColor(1)" id="insert" >Insert</button></li>
+					<li><button class="navbtns" onclick="changeColor(2)" id="design">Design</button></li>
+					<li><button class="navbtns" onclick="changeColor(3)" id="layout">Layout</button></li>
+					<li><button class="navbtns" onclick="changeColor(4)" id="references">References</button></li>
+					<li><button class="navbtns" onclick="changeColor(5)" id="mailings">Mailings</button></li>
+					<li><button class="navbtns" onclick="changeColor(6)" id="review">Review</button></li>
+					<li><button class="navbtns" onclick="changeColor(7)" id="view">View</button></li>
+					<li><button class="navbtns" onclick="changeColor(8)" id="help">Help</button></li>
+				</ul>
+				<div class="indicator"></div>
+				<button class="navshare"><i class="ms-Icon ms-Icon--Share"></i>Share</button>
+			</div>
+			<div class="navitems">
+				<div class="navtab nav-home">
+					<div class="clipboard nav-section">
+						<div class="paste">
+							<div class="paste-icon"><i class="ms-Icon ms-Icon--Paste"></i></div>
+							<button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button>
+							<span>Paste</span>
+						</div>
+						<ul class="function">
+							<li><i class="ms-Icon ms-Icon--Cut"></i>Cut</li>
+							<li><i class="ms-Icon ms-Icon--Copy"></i>Copy</li>
+							<li><i class="ms-Icon ms-Icon--FormatPainter"></i>Format Painter</li>
+						</ul>
+						<span class="clipboard-title bottom-title">Clipboard</span>
+					</div>
+					<div class="font nav-section ">
+						<div class="font-top">
+							<span class="name">Calibri (Body)<button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="size">11<button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="large"><i class="ms-Icon ms-Icon--FontIncrease"></i></span>
+							<span class="small"><i class="ms-Icon ms-Icon--FontDecrease"></i></span>
+							<span class="divider"><i class="ms-Icon ms-Icon--Separator"></i></span>
+							<span class="style"><button class="dropdown">Aa<i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="divider"><i class="ms-Icon ms-Icon--Separator"></i></span>
+							<span class="eraser"><i class="ms-Icon ms-Icon--ClearFormatting"></i></span>
+						</div>
+						<div class="font-bottom">
+							<span class="bold"><i class="ms-Icon ms-Icon--Bold"></i></span>
+							<span class="italics"><i class="ms-Icon ms-Icon--Italic"></i></span>
+							<span class="underline"><i class="ms-Icon ms-Icon--Underline"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="cut"><i class="ms-Icon ms-Icon--Strikethrough"></i></span>
+							<span class="subscript"><i class="ms-Icon ms-Icon--Subscript"></i></span>
+							<span class="superscript"><i class="ms-Icon ms-Icon--Superscript"></i></span>
+							<span class="divider"><i class="ms-Icon ms-Icon--Separator"></i></span>
+							<span class="color"><button class="dropdown">A<i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="color2"><i class="ms-Icon ms-Icon--FabricTextHighlightComposite"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="color3"><i class="ms-Icon ms-Icon--FontColor"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						</div>
+						<span class="font-title bottom-title">Font</span>
+					</div>
+					<div class="paragraph nav-section">
+						<div class="paragraph-top">
+							<span class="list1"><i class="ms-Icon ms-Icon--BulletedList2"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="list2"><i class="ms-Icon ms-Icon--NumberedList"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="list3"><i class="ms-Icon ms-Icon--BulletedTreeList"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="divider"><i class="ms-Icon ms-Icon--Separator"></i></span>
+							<span class="para-left"><i class="ms-Icon ms-Icon--DecreaseIndent"></i></span>
+							<span class="para-right"><i class="ms-Icon ms-Icon--IncreaseIndentMirrored"></i></span>
+							<span class="divider"><i class="ms-Icon ms-Icon--Separator"></i></span>
+							<span class="sort"><i class="ms-Icon ms-Icon--Sort"></i></span>
+							<span class="divider"><i class="ms-Icon ms-Icon--Separator"></i></span>
+							<span class="symbol"><i class="ms-Icon ms-Icon--BidiLtr"></i></span>
+						</div>
+						<div class="paragraph-bottom">
+							<span class="align1"><i class="ms-Icon ms-Icon--AlignLeft"></i></span>
+							<span class="align2"><i class="ms-Icon ms-Icon--AlignCenter"></i></span>
+							<span class="align3"><i class="ms-Icon ms-Icon--AlignCenter"></i></span>
+							<span class="align4"><i class="ms-Icon ms-Icon--AlignJustify"></i></span>
+							<span class="divider"><i class="ms-Icon ms-Icon--Separator"></i></span>
+							<span class="size"><i class="ms-Icon ms-Icon--LineSpacing"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="divider"><i class="ms-Icon ms-Icon--Separator"></i></span>
+							<span class="color-bucket"><i class="ms-Icon ms-Icon--BucketColor"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="borders"><i class="ms-Icon ms-Icon--BorderInside"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						</div>
+						<span class="paragraph-title bottom-title">Paragraph</span>
+					</div>
+					<div class="styles nav-section">
+						<div class="style-tab">
+							<ul>
+								<li><a href="#">AaBbCcDd<br><b>Normal</b></a></li>
+								<li><a href="#">AaBbCcDd<br><b>No Spacing</b></a></li>
+								<li><a href="#">AaBbCcDd<br><b>Heading 1</b></a></li>
+								<li><a href="#">AaBbCcDd<br><b>Heading 2</b></a></li>
+								<li><a href="#">AaBbCcDd<br><b>Title</b></a></li>
+								<li><a href="#">AaBbCcDd<br><b>Subtitle</b></a></li>
+								<li><a href="#">AaBbCcDd<br><b>Subtle</b></a></li>
+								<li><a href="#">AaBbCcDd<br><b>Emphasis</b></a></li>
+							</ul>
+						</div>
+						<span class="styles-title bottom-title">Styles</span>
+					</div>
+					<div class="editing nav-section">
+						<ul>
+							<li><i class="ms-Icon ms-Icon--Search"></i>Find<button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--MicrosoftTranslatorLogoBlue"></i>Replace</li>
+							<li><i class="ms-Icon ms-Icon--Clicked"></i>Select<button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+						</ul>
+						<span class="editing-title bottom-title">Editing</span>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<div class="navtab nav-insert">
+					<div class="pages nav-section">
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--PageList"></i>Cover Page<button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><button class="pagebtn1"><i class="ms-Icon ms-Icon--Page"></i>Blank Page</button></li>
+							<li><button class="pagebtn2"><i class="ms-Icon ms-Icon--TransitionEffect"></i>Page Break</button></li>
+						</ul>
+						<span class="pages-title bottom-title">Pages</span>
+					</div>
+					<div class="tables nav-section">
+						<span class="tab-content padd"><i class="ms-Icon ms-Icon--Table"></i><span class="name">Table</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<span class="tables-title bottom-title">Tables</span>
+					</div>
+					<div class="illustration nav-section">
+						<ul class="ul-horizontal">
+							<li><i class="ms-Icon ms-Icon--Photo2"></i><span class="name">Pictures</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--Shapes"></i><span class="name">Shapes</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--IconSetsFlag"></i><span class="name">Icons</span></li>
+							<li><i class="ms-Icon ms-Icon--CubeShape"></i><span class="name">3D<br>Models</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--SmartGlassRemote"></i><span class="name">SmartArt</span></li>
+							<li><i class="ms-Icon ms-Icon--Chart"></i><span class="name">Charts</span></li>
+							<li><i class="ms-Icon ms-Icon--DesktopScreenshot"></i><span class="name">Screenshots</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+						</ul>
+						<span class="illustration-title bottom-title">Illustrations</span>
+					</div>
+					<div class="addd-ins nav-section">
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--AddIn"></i>Get Add-ins</li>
+							<li><i class="ms-Icon ms-Icon--OfficeAddinsLogo"></i> <span class="name">My Add-ins</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+						</ul>
+						<span class="tab-content"><i class="ms-Icon ms-Icon--WebSearch"></i><span class="name">Wikipedia</span></span>
+						<span class="addd-ins bottom-title">Add-ins</span>
+					</div>
+					<div class="media nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--VideoSearch"></i><span class="name">Online<br>Videos</span></span>
+						<span class="media-title bottom-title">Media</span>
+					</div>
+					<div class="links nav-section">
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--Link"></i><span class="name">Link</span></li>
+							<li><i class="ms-Icon ms-Icon--AddBookmark"></i><span class="name">Bookmark</span></li>
+							<li><i class="ms-Icon ms-Icon--ReopenPages"></i><span class="name">Cross-reference</span></li>
+						</ul>
+						<span class="links-title bottom-title">Links</span>
+					</div>
+					<div class="comments nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--CommentAdd"></i><span class="name">Comment</span></span>
+						<span class="comment-title bottom-title">Comments</span>
+					</div>
+					<div class="header nav-section">
+						<ul class="ul-horizontal">
+							<li><i class="ms-Icon ms-Icon--Header"></i><span class="name">Header</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--Footer"></i><span class="name">Footer</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--PageEdit"></i><span class="name">Page<br>Number</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+						</ul>
+						<span class="header bottom-title">Header & Footer</span>
+					</div>
+					<div class="text nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--InsertTextBox"></i><span class="name">Text<br>Box</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--PageHeader"></i><span class="name">Quick parts</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--AddIn"></i><span class="name">Word Art</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--AddIn"></i><span class="name">Drop Cap</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+						</ul>
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--InsertSignatureLine"></i><span class="name">Signature Line</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--DateTime2"></i><span class="name">Date & Time</span></li>
+							<li><i class="ms-Icon ms-Icon--Invoice"></i><span class="name">Object</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+						</ul>
+						<span class="text-title bottom-title">Text</span>
+					</div>
+					<div class="symbol nav-section">
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--AddIn"></i><span class="name">Equation</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--AddIn"></i><span class="name">Symbol</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+						</ul>
+						<span class="symbol-title bottom-title">Symbols</span>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<div class="navtab nav-design">
+					<div class="doc-formatting nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--BackgroundColor"></i><span class="name">Themes</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<ul class="design-tab">
+							<li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+							<li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+							<li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+							<li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+							<li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+							<li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+							<li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+							<li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+							<li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+							<li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+							<li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+							<li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+						</ul>
+						<span class="tab-content"><i class="ms-Icon ms-Icon--GridViewMedium"></i><span class="name">Colors</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<span class="tab-content"><i class="ms-Icon ms-Icon--InsertTextBox"></i><span class="name">Fonts</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--TextDocumentEdit"></i><span class="name">Paragraph Spacing</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--CircleFill"></i><span class="name">Effects</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--CompletedSolid"></i><span class="name">Set as Default</span></li>
+						</ul>
+						<span class="doc-formatting bottom-title">Document Formatting</span>
+					</div>
+					<div class="page-back nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--PageCheckedin"></i><span class="name">Watermark</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<span class="tab-content"><i class="ms-Icon ms-Icon--BackgroundColor"></i><span class="name">Page<br>Color</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<span class="tab-content"><i class="ms-Icon ms-Icon--BorderAll"></i><span class="name">Page<br>Borders</span></span>
+						<span class="page-back bottom-title">Page Background</span>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<div class="navtab nav-layout">
+					<div class="Page-setup nav-section">
+						<ul class="ul-horizontal">
+							<li><i class="ms-Icon ms-Icon--DynamicList"></i><span class="name">Margins</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--Orientation"></i><span class="name">Orentation</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--PageCheckedOut"></i><span class="name">Size</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--CompactViewList"></i><span class="name">Columns</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+						</ul>
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--Insert"></i><span class="name">Breaks</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--NumberedList"></i><span class="name">Line Numbers</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--NumberSequence"></i><span class="name">Hyphenation</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+						</ul>
+						<span class="page-setup-title bottom-title">Page Setup</span>
+					</div>
+					<div class="paragraph2 nav-section">
+						<ul class="ul-vertical">
+							<li><span class="lable">Indent</span></li>
+							<li><i class="ms-Icon ms-Icon--DecreaseIndent"></i><span class="name">Left:</span><input type="number" class="num"></li>
+							<li><i class="ms-Icon ms-Icon--IncreaseIndent"></i><span class="name">Right:</span><input type="number" class="num"></li>
+						</ul>
+						<ul class="ul-vertical">
+							<li><span class="lable">Spacing</span></li>
+							<li><i class="ms-Icon ms-Icon--LineSpacing"></i><span class="name">Before:</span><input type="number" class="num"></li>
+							<li><i class="ms-Icon ms-Icon--LineSpacing"></i><span class="name">After:</span><input type="number" class="num"></li>
+						</ul>
+						<span class="paragraph2 bottom-title">Paragraph</span>
+					</div>
+					<div class="arrange nav-section">
+						<ul class="ul-horizontal">
+							<li><i class="ms-Icon ms-Icon--PageHeaderEdit"></i><span class="name">Position</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--TextRotateHorizontal"></i><span class="name">Wrap<br>Text</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--ArrangeBringForward"></i><span class="name">Bring<br>Forward</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--ArrangeSendBackward"></i><span class="name">Send<br>Backward</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--SelectAll"></i><span class="name">Selection<br>Plane</span></li>
+						</ul>
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--AlignHorizontalLeft"></i><span class="name">Align</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--GroupObject"></i><span class="name">Group</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--Rotate"></i><span class="name">Rotate</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+						</ul>
+						<span class="arrange bottom-title">Arrange</span>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<div class="navtab nav-references">
+					<div class="table-content nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--AppsContent"></i><span class="name">Table of<br>Contents</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--PageAdd"></i><span class="name">Add Text</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--UpdateRestore"></i><span class="name">Update Table</span></li>
+						</ul>
+						<span class="table-content bottom-title">Table of Contents</span>
+					</div>
+					<div class="footnotes nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--FontSize"></i><span class="name">Insert<br>Footnote</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--CollapseContent"></i><span class="name">Insert Endnote</span></li>
+							<li><i class="ms-Icon ms-Icon--IndentFirstLine"></i><span class="name">Next Footnote</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--AddNotes"></i><span class="name">Show Notes</span></li>
+						</ul>
+						<span class="footness-title bottom-title">Footnotes</span>
+					</div>
+					<div class="research nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--Search"></i><span class="name">Search</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<span class="research-title bottom-title">Research</span>
+					</div>
+					<div class="bibliography nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--InsertSignatureLine"></i><span class="name">Insert<br>Citation</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--CalculatedTable"></i><span class="name">Manage Sources</span></li>
+							<li><i class="ms-Icon ms-Icon--EditStyle"></i><span class="name">Style:</span><button class="dropdown apa">APA<i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--PageArrowRight"></i><span class="name">Bibliography</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+						</ul>
+						<span class="bibliography-title bottom-title">Citations & Bibliography</span>
+					</div>
+					<div class="caption nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--FileImage"></i><span class="name">Insert<br>Caption</span></span>
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--Page"></i><span class="name">Insert Table of Figures</span></li>
+							<li><i class="ms-Icon ms-Icon--PageData"></i><span class="name">Update Table</span></li>
+							<li><i class="ms-Icon ms-Icon--PageLink"></i><span class="name">Cross-reference</span></li>
+						</ul>
+						<span class="caption-title bottom-title">Captions</span>
+					</div>
+					<div class="index nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--PageAdd"></i><span class="name">Mark<br>Entry</span></span>
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--Page"></i><span class="name">Insert Index</span></li>
+							<li><i class="ms-Icon ms-Icon--PageData"></i><span class="name">Update Index</span></li>
+						</ul>
+						<span class="insex-title bottom-title">Index</span>
+					</div>
+					<div class="auth nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--Script"></i><span class="name">Mark<br>Citation</span></span>
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--Diploma"></i><span class="name">Insert Table of Authorities</span></li>
+							<li><i class="ms-Icon ms-Icon--PageData"></i><span class="name">Update Table</span></li>
+						</ul>
+						<span class="auth-title bottom-title">Table of Authorities</span>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<div class="navtab nav-mailings">
+					<div class="create nav-section">
+						<ul class="ul-horizontal">
+							<li><i class="ms-Icon ms-Icon--Mail"></i><span class="name">Envelopes</span></li>
+							<li><i class="ms-Icon ms-Icon--EditMail"></i><span class="name">Lables</span></li>
+						</ul>
+						<span class="create-title bottom-title">Create</span>
+					</div>
+					<div class="start-mail nav-section">
+						<ul class="ul-horizontal">
+							<li><i class="ms-Icon ms-Icon--MailForward"></i><span class="name">Start Mail<br>Merge</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--ManagerSelfService"></i><span class="name">Select<br>Recipient</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--MailOptions"></i><span class="name">Edit<br>Recipient List</span></li>
+						</ul>
+						<span class="start-mail-title bottom-title">Start Mail Merge</span>
+					</div>
+					<div class="insert-field nav-section">
+						<ul class="ul-horizontal">
+							<li><i class="ms-Icon ms-Icon--MailCheck"></i><span class="name">Highlight<br>Merge Field</span></li>
+							<li><i class="ms-Icon ms-Icon--InputAddress"></i><span class="name">Address<br>Block</span></li>
+							<li><i class="ms-Icon ms-Icon--GreetingCard"></i><span class="name">Greeting<br>Line</span></li>
+							<li><i class="ms-Icon ms-Icon--Merge"></i><span class="name">Insert Merge<br>Field</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+						</ul>
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--PageLock"></i><span class="name">Rules</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--BranchCompare"></i><span class="name">Match Field</span></li>
+							<li><i class="ms-Icon ms-Icon--PageData"></i><span class="name">Update Lables</span></li>
+						</ul>
+						<span class="insert-field-title bottom-title">Write & Insert Fields</span>
+					</div>
+					<div class="preview nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--ShowResults"></i><span class="name">Preview<br>Result</span></span>
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--ChevronLeftEnd6"></i><i class="ms-Icon ms-Icon--ChevronLeftSmall"></i><i class="ms-Icon ms-Icon--Checkbox"></i><i class="ms-Icon ms-Icon--ChevronRightSmall"></i><i class="ms-Icon ms-Icon--ChevronRightEnd6"></i></li>
+							<li><i class="ms-Icon ms-Icon--DocumentSearch"></i><span class="name">Find Recipent</span></li>
+							<li><i class="ms-Icon ms-Icon--PassiveAuthentication"></i><span class="name">Check for Errors</span></li>
+						</ul>
+						<span class="preview-title bottom-title">Preview Results</span>
+					</div>
+					<div class="finish nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--AccessibiltyChecker"></i><span class="name">Finish &<br>Merge</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<span class="finish bottom-title">Finish</span>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<div class="navtab nav-review">
+					<div class="proofing nav-section">
+						<ul class="ul-horizontal">
+							<li><i class="ms-Icon ms-Icon--Spelling"></i><span class="name">Spelling &<br>Grammar</span></li>
+							<li><i class="ms-Icon ms-Icon--Dictionary"></i><span class="name">Thesaurus</span></li>
+							<li><i class="ms-Icon ms-Icon--NumberSequence"></i><span class="name">Word<br>Count</span></li>
+						</ul>
+						<span class="proofing bottom-title">Proofing</span>
+					</div>
+					<div class="speech nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--ReadOutLoud"></i><span class="name">Read Aloud</span></span>
+						<span class="speech-title bottom-title">Speech</span>
+					</div>
+					<div class="access nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--AccessibiltyChecker"></i><span class="name">Check<br>Accessibility</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<span class="access-title bottom-title">Accessibility</span>
+					</div>
+					<div class="language nav-section">
+						<ul class="ul-horizontal">
+							<li><i class="ms-Icon ms-Icon--MicrosoftTranslatorLogo"></i><span class="name">Translate</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--MicrosoftTranslatorLogoGreen"></i><span class="name">Language</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+						</ul>
+						<span class="language-title bottom-title">Speech</span>
+					</div>
+					<div class="comment nav-section">
+						<ul class="ul-horizontal">
+							<li><i class="ms-Icon ms-Icon--CommentAdd"></i><span class="name">New<br>Comment</span></li>
+							<li><i class="ms-Icon ms-Icon--CommentUrgent"></i><span class="name">Delete</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--CommentPrevious"></i><span class="name">Previous</span></li>
+							<li><i class="ms-Icon ms-Icon--CommentNext"></i><span class="name">Next</span></li>
+							<li><i class="ms-Icon ms-Icon--CommentActive"></i><span class="name">Show<br>Comments</span></li>
+						</ul>
+						<span class="comment-title bottom-title">Speech</span>
+					</div>
+					<div class="tracking nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--PageHeaderEdit"></i><span class="name">Track<br>Changes</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--PageEdit"></i><span class="name">Simple Markup</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--ContentFeed"></i><span class="name">Show Markup</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--ContentSettings"></i><span class="name">Reviewing Pane</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+						</ul>
+						<span class="tracking-title bottom-title">Tracking</span>
+					</div>
+					<div class="tracking nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--DocumentApproval"></i><span class="name">Accept</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<span class="tab-content"><i class="ms-Icon ms-Icon--PageBlock"></i><span class="name">Reject</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--Previous"></i><span class="name">Previous</span></li>
+							<li><i class="ms-Icon ms-Icon--Next"></i><span class="name">Next</span></li>
+						</ul>
+						<span class="tracking-title bottom-title">Tracking</span>
+					</div>
+					<div class="compare nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--Compare"></i><span class="name">Compare</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<span class="compare-title bottom-title">Compare</span>
+					</div>
+					<div class="protect nav-section">
+						<ul class="ul-horizontal">
+							<li><i class="ms-Icon ms-Icon--BlockContact"></i><span class="name">Block<br>Authors</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--BulkPageBlock"></i><span class="name">Restrict<br>Editing</span></li>
+						</ul>
+						<span class="protect-title bottom-title">Protect</span>
+					</div>
+					<div class="ink nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--Hide"></i><span class="name">Hide<br>Ink</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<span class="ink-title bottom-title">Ink</span>
+					</div>
+					<div class="onenote nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--OneNoteLogo16"></i><span class="name">Linked<br>Notes</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<span class="onenote-title bottom-title">OneNote</span>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<div class="navtab nav-view">
+					<div class="views nav-section">
+						<ul class="ul-horizontal">
+							<li><i class="ms-Icon ms-Icon--ReadingMode"></i><span class="name">Read<br>Mode</span></li>
+							<li><i class="ms-Icon ms-Icon--PBIHomeLayoutDefault"></i><span class="name">Print<br>Layout</span></li>
+							<li><i class="ms-Icon ms-Icon--WebEnvironment"></i><span class="name">Web<br>Layout</span></li>
+						</ul>
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--Articles"></i><span class="name">Outline</span></li>
+							<li><i class="ms-Icon ms-Icon--Articles"></i><span class="name">Draft</span></li>
+						</ul>
+						<span class="views bottom-title">Views</span>
+					</div>
+					<div class="immersive nav-section">
+						<ul class="ul-horizontal">
+							<li><i class="ms-Icon ms-Icon--FocusView"></i><span class="name">Focus</span></li>
+							<li><i class="ms-Icon ms-Icon--ReadOutLoud"></i><span class="name">Immersive<br>Reader</span></li>
+						</ul>
+						<span class="immersive-title bottom-title">Immersive</span>
+					</div>
+					<div class="page-movement nav-section">
+						<ul class="ul-horizontal">
+							<li><i class="ms-Icon ms-Icon--CellSplitVertical"></i><span class="name">Vertical</span></li>
+							<li><i class="ms-Icon ms-Icon--DiffSideBySide"></i><span class="name">Side<br>to Side</span></li>
+						</ul>
+						<span class="page-movement bottom-title">Page Movement</span>
+					</div>
+					<div class="show nav-section">
+						<ul class="ul-vertical">
+							<li><input type="Checkbox"><span class="name">Ruler</span></li>
+							<li><input type="Checkbox"><span class="name">Gridlines</span></li>
+							<li><input type="Checkbox"><span class="name">Navigation Pane</span></li>
+						</ul>
+						<span class="show bottom-title">Show</span>
+					</div>
+					<div class="zoom nav-section">
+						<ul class="ul-horizontal">
+							<li><i class="ms-Icon ms-Icon--Search"></i><span class="name">Zoom</span></li>
+							<li><i class="ms-Icon ms-Icon--Page"></i><span class="name">100%</span></li>
+						</ul>
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--page"></i><span class="name">One Page</span></li>
+							<li><i class="ms-Icon ms-Icon--BulkUpload"></i><span class="name">Multiple Pages</span></li>
+							<li><i class="ms-Icon ms-Icon--FitWidth"></i><span class="name">Page Width</span></li>
+						</ul>
+						<span class="zoom bottom-title">Zoom</span>
+					</div>
+					<div class="window nav-section">
+						<ul class="ul-horizontal">
+							<li><i class="ms-Icon ms-Icon--OpenInNewTab"></i><span class="name">New<br>Window</span></li>
+							<li><i class="ms-Icon ms-Icon--ArrangeBringForward"></i><span class="name">Arrange<br>All</span></li>
+							<li><i class="ms-Icon ms-Icon--CellSplitVertical"></i><span class="name">Split</span></li>
+						</ul>
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--DiffSideBySide"></i><span class="name">View Side by Side</span></li>
+							<li><i class="ms-Icon ms-Icon--FormProcessing"></i><span class="name">Synchronous Scrolling</span></li>
+							<li><i class="ms-Icon ms-Icon--Reset"></i><span class="name">Reset Window Position</span></li>
+						</ul>
+						<span class="tab-content padd"><i class="ms-Icon ms-Icon--Switch"></i><span class="name">Switch<br>Windows</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<span class="window bottom-title">Window</span>
+					</div>
+					<div class="macros nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--Script"></i><span class="name">Macros</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<span class="macros-title bottom-title">Macros</span>
+					</div>
+					<div class="SharePoint nav-section">
+						<span class="tab-content"><i class="ms-Icon ms-Icon--ColumnOptions"></i><span class="name">Properties</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<span class="SharePoint-title bottom-title">SharePoint</span>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<div class="navtab nav-help">
+					<div class="help nav-section">
+						<ul class="ul-horizontal">
+							<li><i class="ms-Icon ms-Icon--Help"></i><span class="name">Help</span></li>
+							<li><i class="ms-Icon ms-Icon--Telemarketer"></i><span class="name">Contact<br>Support</span></li>
+							<li><i class="ms-Icon ms-Icon--Feedback"></i><span class="name">Feedback</span></li>
+							<li><i class="ms-Icon ms-Icon--D365TalentLearn"></i><span class="name">Show<br>Training</span></li>
+						</ul>
+						<span class="help-title bottom-title">Help</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ruler">
+			<div class="rule-svg"></div>
+		</div>
+		<div class="writing-page" id="main-page">
+			<div class="ruler2">
+				<div class="rule2-svg"></div>
+			</div>
+			<div class="main-page">
+				<textarea></textarea>
+			</div>
+		</div>
+		<div class="page-bottom">
+			<ul>
+				<li>Page 1 of 1</li>
+				<li>0 words</li>
+				<li><i class="ms-Icon ms-Icon--Share"></i></li>
+				<li>English(United States)</li>
+			</ul>
+			<ul class="page-bottom-right">
+				<li><i class="ms-Icon ms-Icon--Share"></i>Focus</li>
+				<li><i class="ms-Icon ms-Icon--Share"></i></li>
+				<li><i class="ms-Icon ms-Icon--Share"></i></li>
+				<li><i class="ms-Icon ms-Icon--Share"></i></li>
+				<li><b>-</b><input type="range"><b>+</b></li>
+				<li>100%</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

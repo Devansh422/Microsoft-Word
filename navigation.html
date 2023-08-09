@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		.navigation{
+		height: 130px;
+		width: 100%;
+		display: flex;
+		background: #333;
+		}
+		.navigation .navbar{
+		position: absolute;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 30px;
+		}
+		.navigation .navbar ul{
+		display: flex;
+		margin-left: 5px;
+		list-style: none;
+		}
+		.navigation .navbar ul li{
+		display: flex;
+		justify-content: center;
+		transition: 0.2s;
+		}
+		.navigation .navbar ul li button{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 30px;
+		width: fit-content;
+		transition: 0.2s;
+		font-size: 15px;
+		border: none;
+		}
+		.navigation .navbar ul li:nth-child(2){
+			padding-left: 10px;
+		}
+		.navigation .navbar ul li:nth-child(1) button{width: 48.44px;}
+		.navigation .navbar ul li:nth-child(2) button{width: 66.2px;}
+		.navigation .navbar ul li:nth-child(3) button{width: 63px;}
+		.navigation .navbar ul li:nth-child(4) button{width: 71.7px;}
+		.navigation .navbar ul li:nth-child(5) button{width: 70.3px;}
+		.navigation .navbar ul li:nth-child(6) button{width: 92.7px;}
+		.navigation .navbar ul li:nth-child(7) button{width: 81.7px;}
+		.navigation .navbar ul li:nth-child(8) button{width: 71.9px;}
+		.navigation .navbar ul li:nth-child(9) button{width: 51.64px;}
+		.navigation .navbar ul li:nth-child(10) button{width: 56.95px;}
+		.navigation .navbar ul li button:hover{
+		color: #252423;
+		background: #FAF9F8;
+		font-weight: 600;
+		}
+		.navigation .navbar ul li button.active{
+		font-weight: 600;
+		}
+		.navigation .navbar .navshare{
+		position: absolute;
+		display: flex;
+		align-items: center;
+		padding: 2px 8px 2px 8px;
+		font-size: 15px;
+		font-weight: 500;
+		border: 1px solid #E1DFDD;
+		border-radius: 3px;
+		right: 15px;
+		color: #2B579A;
+		background: #fff;
+		}
+		.navigation .navbar .navshare i{
+		padding-right: 5px;
+		color: #2B579A;
+		fill: #2B579A;
+		}
+		.indicator {
+  position: absolute;
+  display: flex;
+  height: 3.5px;
+  width: 35px;
+  background-color: blue; 
+  transition: left 0.3s ease;
+  bottom: 0;
+  margin-left: 71.04px;
+}
+		</style>
+	</head>
+	<body>
+		<div class="navigation">
+			<div class="navbar">
+				<ul class="navbuttons">
+					<li><button class="navbtns" id="file">File</button></li>
+					<li><button class="navbtns active" id="home" >Home</button></li>
+					<li><button class="navbtns" id="insert" >Insert</button></li>
+					<li><button class="navbtns" id="design">Design</button></li>
+					<li><button class="navbtns" id="layout">Layout</button></li>
+					<li><button class="navbtns" id="references">References</button></li>
+					<li><button class="navbtns" id="mailings">Mailings</button></li>
+					<li><button class="navbtns" id="review">Review</button></li>
+					<li><button class="navbtns" id="view">View</button></li>
+					<li><button class="navbtns" id="help">Help</button></li>
+				</ul>
+				<div class="indicator"></div>
+				<button class="navshare"><i class="ms-Icon ms-Icon--Share"></i>Share</button>
+			</div>
+		</div>
+		<script type="text/javascript">
+		var header = document.querySelector(".navbuttons");
+		var btns = header.getElementsByClassName("navbtns");
+		for (var i = 0; i < btns.length; i++) {
+		btns[i].addEventListener("click", function() {
+		var current = document.getElementsByClassName("active");
+		current[0].className = current[0].className.replace(" active", "");
+		this.className += " active";
+
+		var activeWidth = current[0].getBoundingClientRect().width;
+		var activeLeft = current[0].getBoundingClientRect().left;
+		const middle = ( (activeWidth / 2) - 17.5 );
+		var indicator = document.querySelector(".indicator");
+
+		indicator.style.left = activeLeft + "px";
+		indicator.style.marginLeft = "0px";
+		indicator.style.marginLeft = middle + "px";
+
+		});
+		}
+		</script>
+	</body>
+</html>

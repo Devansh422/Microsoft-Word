@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Word</title>
+    <link rel="stylesheet" href="fabric-icons.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="navigation">
+        <div class="navbar">
+          <ul class="navbuttons">
+            <li><button class="navbtns" id="file">File</button></li>
+            <li><button class="navbtns active" onclick="changeColor(0)" id="home" >Home</button></li>
+            <li><button class="navbtns" onclick="changeColor(1)" id="insert" >Insert</button></li>
+            <li><button class="navbtns" onclick="changeColor(2)" id="design">Design</button></li>
+            <li><button class="navbtns" onclick="changeColor(3)" id="layout">Layout</button></li>
+            <li><button class="navbtns" onclick="changeColor(4)" id="references">References</button></li>
+            <li><button class="navbtns" onclick="changeColor(5)" id="mailings">Mailings</button></li>
+            <li><button class="navbtns" onclick="changeColor(6)" id="review">Review</button></li>
+            <li><button class="navbtns" onclick="changeColor(7)" id="view">View</button></li>
+            <li><button class="navbtns" onclick="changeColor(8)" id="help">Help</button></li>
+          </ul>
+          <div class="indicator"></div>
+          <button class="navshare"><i class="ms-Icon ms-Icon--Share"></i>Share</button>
+        </div>
+        <div class="navitems">
+          <div class="navtab nav-help">
+            <div class="help nav-section">
+              <ul>
+                <li><i class="ms-Icon ms-Icon--Share"></i><span class="name">Help</span></li>
+                <li><i class="ms-Icon ms-Icon--Share"></i><span class="name">Contact<br>Support</span></li>
+                <li><i class="ms-Icon ms-Icon--Share"></i><span class="name">Feedback</span></li>
+                <li><i class="ms-Icon ms-Icon--Share"></i><span class="name">Show<br>Training</span></li>
+              </ul>
+              <span class="help-title bottom-title">Help</span>
+            </div>
+          </div>
+
+
+          <div class="navtab nav-design">
+            <div class="doc-formatting nav-section">
+              <span class="tab-content"><i class="ms-Icon ms-Icon--Share"></i><span class="name">Themes</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+              <ul class="design-tab">
+                <li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+                <li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+                <li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+                <li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+                <li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+                <li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+                <li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+                <li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+                <li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+                <li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+                <li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+                <li><span class="d-title">Title</span><b>Heading 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
+              </ul>
+              <span class="tab-content"><i class="ms-Icon ms-Icon--Share"></i><span class="name">Colors</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+              <span class="tab-content"><i class="ms-Icon ms-Icon--Share"></i><span class="name">Fonts</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+              <ul class="ul-vertical">
+                <li><i class="ms-Icon ms-Icon--Share"></i><span class="name">Paragraph Spacing</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+                <li><i class="ms-Icon ms-Icon--Share"></i><span class="name">Effects</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+                <li><i class="ms-Icon ms-Icon--Share"></i><span class="name">Set as Default</span></li>
+              </ul>
+              <span class="doc-formatting bottom-title">Document Formatting</span>
+            </div>
+            <div class="page-back nav-section">
+              <span class="tab-content"><i class="ms-Icon ms-Icon--Share"></i><span class="name">Watermark</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+              <span class="tab-content"><i class="ms-Icon ms-Icon--Share"></i><span class="name">Page<br>Color</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+              <span class="tab-content"><i class="ms-Icon ms-Icon--Share"></i><span class="name">Page<br>Borders</span></span>
+              <span class="page-back bottom-title">Page Background</span>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+          
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
