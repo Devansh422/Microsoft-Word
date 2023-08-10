@@ -1125,7 +1125,7 @@ input[type="range"]::-webkit-slider-thumb {
 	display: flex;
 	width: fit-content;
 	height: 100px;
-	width: 1535px;
+	width: 1540px;
 	position: absolute;
 	transition:opacity 0.3s ease;
 	opacity: 1;
