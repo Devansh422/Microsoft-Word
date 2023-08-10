@@ -1108,7 +1108,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 @media(max-width:1500px){
 	html{
-		width: 1550px;
+		width: 1540px;
 		height: 750px;
 	}
 	body{
@@ -1116,8 +1116,8 @@ input[type="range"]::-webkit-slider-thumb {
 	}
 	.main-container{
 	height: 750px;
-	width: 1550px;
-	max-width: 1550px;
+	width: 1540px;
+	max-width: 1540px;
 	overflow: hidden;
 
 }
@@ -1125,7 +1125,7 @@ input[type="range"]::-webkit-slider-thumb {
 	display: flex;
 	width: fit-content;
 	height: 100px;
-	width: 1550px;
+	width: 1540px;
 	position: absolute;
 	transition:opacity 0.3s ease;
 	opacity: 1;
