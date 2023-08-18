@@ -1,0 +1,149 @@
+:root{
+--border:#E1DFDD;
+--divider:#D2D0CE;
+}
+.default .navigation{
+background: #F3F2F1;
+box-shadow: 2px 5px 5px #d5d5d5;
+}
+.default .navigation i:hover{
+	background: var(--border);
+}
+.default .navigation .divider{
+	width: 10px;
+	height: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.default .navigation .divider i{
+	font-size: 18px;
+}
+body{
+background: #e6e6e6;
+}
+.default .navigation .navbar ul li button:hover{
+color: #252423;
+background: #FAF9F8;
+}
+.default .navigation .navbar .navshare{
+	border: 1px solid #E1DFDD;
+		border-radius: 3px;
+		color: #2B579A;
+		background: #fff;
+}
+
+.default .navigation .navbar .navshare i{
+		color: #2B579A;
+		fill: #2B579A;
+		}
+
+.default .navigation .indicator{
+	background-color: #2b579a;
+	  border-radius: 20px; 
+	  margin-left:78px;
+}
+
+.default .navigation .navitems .nav-section{
+	border-right:1px solid #999;
+}
+
+.default .navigation .font .font-top .choose-font{
+	background: #fff;
+	border: 1px solid #999;
+}
+.default .navigation .font .font-top .choose-font .dropdown{
+	background: #fff;
+	border: 1px solid #999;
+}
+.default .navigation .font .font-top .choose-font:hover{
+	border-color: #555;
+}
+.default .navigation .font .font-top .choose-font:hover .dropdown{
+	border-color: #555;
+	background: #E1DFDD;
+}
+
+.default .navigation .nav-section .hover-2{
+	display: flex;
+	align-items: center;
+	border: 1px solid transparent;
+	height: 24px;
+}
+.default .navigation .nav-section .hover-2:hover{
+	height: 24px;
+	border: 1px solid var(--border);
+}
+.default .navigation .nav-section .hover-2 .dropdown{
+	height: 24px;
+}
+.default .navigation .nav-section .hover-2 .dropdown i{
+	pointer-events: none;
+}
+.default .navigation .nav-section .hover-2 .dropdown:hover{
+	height: 24px;
+	background: var(--border);
+}
+
+.default .navigation .styles .style-tab ul{
+	border: 2px solid #999;
+	padding: 1px;
+}
+.default .navigation .styles .style-tab ul li:hover{
+	border-color: #999;
+}
+.default .navigation .styles{
+	border-right: 1px solid #999;
+}
+
+.default .navigation .navtab .nav-section .tab-content:hover{
+	background: var(--border);
+}
+
+
+
+.default .navigation .navtab .nav-section .tab-content{
+	border-radius: 0px;
+}
+
+.default .navigation .navtab .nav-section .ul-horizontal li{
+	border-radius: 0px;
+}
+.default .navigation .navtab .nav-section .ul-horizontal li:hover{
+	background: var(--border);
+}
+.default .navigation .navtab .nav-section .ul-horizontal li i{
+	position: absolute;
+	font-size: 30px;
+	pointer-events: none;
+}
+.default .navigation .navtab .nav-section .ul-horizontal li .dropdown{
+	position: absolute;
+	transform: scale(0.325);
+	margin-top: 57px;
+}
+.default .navigation .navtab .nav-section .ul-horizontal li .name{
+	font-size: 13px;
+	text-align: center;
+	margin-top: 38px;
+	line-height: 13px;
+}
+
+
+
+
+
+.default .navigation .navtab .nav-section .design-tab{
+	border: 1px solid var(--border);
+}
+.default .navigation .navtab .nav-section .design-tab li{
+	border: 5px solid transparent;
+}
+.default .navigation .navtab .nav-section .design-tab li:hover{
+	border: 5px solid #999;
+	background: transparent;
+}
+
+.default .navigation .navtab .nav-section{
+	padding: 0px 5px 0px 5px;
+}
