@@ -6,9 +6,11 @@
 	<title>Word</title>
 	<link rel="stylesheet" href="fabric-icons.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="default.css">
+	<link rel="stylesheet" type="text/css" href="google.css">
 </head>
 <body>
-	<div class="main-container">
+	<div class="main-container default">
 		<div class="navigation">
 			<div class="navbar">
 				<ul class="navbuttons">
@@ -29,22 +31,18 @@
 			<div class="navitems">
 				<div class="navtab nav-home">
 					<div class="clipboard nav-section">
-						<div class="paste">
-							<div class="paste-icon"><i class="ms-Icon ms-Icon--Paste"></i></div>
-							<button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button>
-							<span>Paste</span>
-						</div>
-						<ul class="function">
-							<li><i class="ms-Icon ms-Icon--Cut"></i>Cut</li>
-							<li><i class="ms-Icon ms-Icon--Copy"></i>Copy</li>
-							<li><i class="ms-Icon ms-Icon--FormatPainter"></i>Format Painter</li>
+						<span class="tab-content r-padd"><i class="ms-Icon ms-Icon--Paste"></i><span class="name">Paste</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<ul class="ul-vertical r-padd">
+							<li><i class="ms-Icon ms-Icon--Cut"></i><span class="name">Cut</span></li>
+							<li><i class="ms-Icon ms-Icon--Copy"></i><span class="name">Copy</span></li>
+							<li><i class="ms-Icon ms-Icon--FormatPainter"></i><span class="name">Format Painter</span></li>
 						</ul>
 						<span class="clipboard-title bottom-title">Clipboard</span>
 					</div>
 					<div class="font nav-section ">
 						<div class="font-top">
-							<span class="name">Calibri (Body)<button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
-							<span class="size">11<button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="name choose-font">Calibri (Body)<button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="size choose-font">11<button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
 							<span class="large"><i class="ms-Icon ms-Icon--FontIncrease"></i></span>
 							<span class="small"><i class="ms-Icon ms-Icon--FontDecrease"></i></span>
 							<span class="divider"><i class="ms-Icon ms-Icon--Separator"></i></span>
@@ -55,22 +53,22 @@
 						<div class="font-bottom">
 							<span class="bold"><i class="ms-Icon ms-Icon--Bold"></i></span>
 							<span class="italics"><i class="ms-Icon ms-Icon--Italic"></i></span>
-							<span class="underline"><i class="ms-Icon ms-Icon--Underline"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="underline hover-2"><i class="ms-Icon ms-Icon--Underline"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
 							<span class="cut"><i class="ms-Icon ms-Icon--Strikethrough"></i></span>
 							<span class="subscript"><i class="ms-Icon ms-Icon--Subscript"></i></span>
 							<span class="superscript"><i class="ms-Icon ms-Icon--Superscript"></i></span>
 							<span class="divider"><i class="ms-Icon ms-Icon--Separator"></i></span>
 							<span class="color"><button class="dropdown">A<i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
-							<span class="color2"><i class="ms-Icon ms-Icon--FabricTextHighlightComposite"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
-							<span class="color3"><i class="ms-Icon ms-Icon--FontColor"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="color2 hover-2"><i class="ms-Icon ms-Icon--FabricTextHighlightComposite"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="color3 hover-2"><i class="ms-Icon ms-Icon--FontColor"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
 						</div>
 						<span class="font-title bottom-title">Font</span>
 					</div>
 					<div class="paragraph nav-section">
 						<div class="paragraph-top">
-							<span class="list1"><i class="ms-Icon ms-Icon--BulletedList2"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
-							<span class="list2"><i class="ms-Icon ms-Icon--NumberedList"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
-							<span class="list3"><i class="ms-Icon ms-Icon--BulletedTreeList"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="list hover-2"><i class="ms-Icon ms-Icon--BulletedList2"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="list hover-2"><i class="ms-Icon ms-Icon--NumberedList"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="list hover-2"><i class="ms-Icon ms-Icon--BulletedTreeList"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
 							<span class="divider"><i class="ms-Icon ms-Icon--Separator"></i></span>
 							<span class="para-left"><i class="ms-Icon ms-Icon--DecreaseIndent"></i></span>
 							<span class="para-right"><i class="ms-Icon ms-Icon--IncreaseIndentMirrored"></i></span>
@@ -85,10 +83,10 @@
 							<span class="align3"><i class="ms-Icon ms-Icon--AlignCenter"></i></span>
 							<span class="align4"><i class="ms-Icon ms-Icon--AlignJustify"></i></span>
 							<span class="divider"><i class="ms-Icon ms-Icon--Separator"></i></span>
-							<span class="size"><i class="ms-Icon ms-Icon--LineSpacing"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="size hover-2"><i class="ms-Icon ms-Icon--LineSpacing"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
 							<span class="divider"><i class="ms-Icon ms-Icon--Separator"></i></span>
-							<span class="color-bucket"><i class="ms-Icon ms-Icon--BucketColor"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
-							<span class="borders"><i class="ms-Icon ms-Icon--BorderInside"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="color-bucket hover-2"><i class="ms-Icon ms-Icon--BucketColor"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+							<span class="borders hover-2"><i class="ms-Icon ms-Icon--BorderInside"></i><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
 						</div>
 						<span class="paragraph-title bottom-title">Paragraph</span>
 					</div>
@@ -108,10 +106,10 @@
 						<span class="styles-title bottom-title">Styles</span>
 					</div>
 					<div class="editing nav-section">
-						<ul>
-							<li><i class="ms-Icon ms-Icon--Search"></i>Find<button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
-							<li><i class="ms-Icon ms-Icon--MicrosoftTranslatorLogoBlue"></i>Replace</li>
-							<li><i class="ms-Icon ms-Icon--Clicked"></i>Select<button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+						<ul class="ul-vertical">
+							<li><i class="ms-Icon ms-Icon--Search"></i><span class="name">Find</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--MicrosoftTranslatorLogoBlue"></i><span class="name">Replace</span></li>
+							<li><i class="ms-Icon ms-Icon--Clicked"></i><span class="name">Select</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
 						</ul>
 						<span class="editing-title bottom-title">Editing</span>
 					</div>
@@ -145,7 +143,7 @@
 				<div class="navtab nav-insert">
 					<div class="pages nav-section">
 						<ul class="ul-vertical">
-							<li><i class="ms-Icon ms-Icon--PageList"></i>Cover Page<button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li class="widthinc"><i class="ms-Icon ms-Icon--PageList"></i>Cover Page<button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
 							<li><button class="pagebtn1"><i class="ms-Icon ms-Icon--Page"></i>Blank Page</button></li>
 							<li><button class="pagebtn2"><i class="ms-Icon ms-Icon--TransitionEffect"></i>Page Break</button></li>
 						</ul>
@@ -313,8 +311,10 @@
 								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></b></li>
 						</ul>
-						<span class="tab-content"><i class="ms-Icon ms-Icon--GridViewMedium"></i><span class="name">Colors</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
-						<span class="tab-content"><i class="ms-Icon ms-Icon--InsertTextBox"></i><span class="name">Fonts</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<ul class="ul-horizontal">
+							<li><i class="ms-Icon ms-Icon--GridViewMedium"></i><span class="name">Colors</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--InsertTextBox"></i><span class="name">Fonts</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+						</ul>
 						<ul class="ul-vertical">
 							<li><i class="ms-Icon ms-Icon--TextDocumentEdit"></i><span class="name">Paragraph Spacing</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
 							<li><i class="ms-Icon ms-Icon--CircleFill"></i><span class="name">Effects</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
@@ -323,10 +323,12 @@
 						<span class="doc-formatting bottom-title">Document Formatting</span>
 					</div>
 					<div class="page-back nav-section">
-						<span class="tab-content"><i class="ms-Icon ms-Icon--PageCheckedin"></i><span class="name">Watermark</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
-						<span class="tab-content"><i class="ms-Icon ms-Icon--BackgroundColor"></i><span class="name">Page<br>Color</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
-						<span class="tab-content"><i class="ms-Icon ms-Icon--BorderAll"></i><span class="name">Page<br>Borders</span></span>
-						<span class="page-back bottom-title">Page Background</span>
+						<ul class="ul-horizontal">
+							<li><i class="ms-Icon ms-Icon--PageCheckedin"></i><span class="name">Watermark</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--BackgroundColor"></i><span class="name">Page<br>Color</span><button class="dropdown"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--BorderAll"></i><span class="name">Page<br>Borders</span></li>
+						</ul>
+						<span class="bottom-title">Page Borders</span>
 					</div>
 				</div>
 
@@ -592,8 +594,10 @@
 						<span class="tracking-title bottom-title">Tracking</span>
 					</div>
 					<div class="tracking nav-section">
-						<span class="tab-content"><i class="ms-Icon ms-Icon--DocumentApproval"></i><span class="name">Accept</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
-						<span class="tab-content"><i class="ms-Icon ms-Icon--PageBlock"></i><span class="name">Reject</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></span>
+						<ul class="ul-horizontal">
+							<li><i class="ms-Icon ms-Icon--DocumentApproval"></i><span class="name">Accept</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+							<li><i class="ms-Icon ms-Icon--PageBlock"></i><span class="name">Reject</span><button class="dropdown lowpadd"><i class="ms-Icon ms-Icon--ChevronDownSmall"></i></button></li>
+						</ul>
 						<ul class="ul-vertical">
 							<li><i class="ms-Icon ms-Icon--Previous"></i><span class="name">Previous</span></li>
 							<li><i class="ms-Icon ms-Icon--Next"></i><span class="name">Next</span></li>
