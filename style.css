@@ -44,14 +44,8 @@ button{
 i{
 	padding: 3px;
 }
-
-
-
-.navigation{
-	background: #F3F2F1;
-}
-body{
-	background: #e6e6e6;
+.name{
+	cursor: default;
 }
 
 
@@ -67,7 +61,9 @@ body{
 	height: 130px;
 	width: 100%;
 	display: flex;
-	box-shadow: 2px 5px 5px #d5d5d5;
+}
+.navigation{
+	font-size: 14px;
 }
 .navigation .navbar{
 		position: absolute;
@@ -114,9 +110,7 @@ body{
 		.navigation .navbar ul li:nth-child(9) button{width: 51.64px;}
 		.navigation .navbar ul li:nth-child(10) button{width: 56.95px;}
 		.navigation .navbar ul li button:hover{
-		color: #252423;
-		background: #FAF9F8;
-		font-weight: 600;
+			font-weight: 600;
 		}
 		.navigation .navbar ul li button.active{
 		font-weight: 600;
@@ -128,37 +122,27 @@ body{
 		padding: 2px 8px 2px 8px;
 		font-size: 15px;
 		font-weight: 500;
-		border: 1px solid #E1DFDD;
-		border-radius: 3px;
 		right: 15px;
-		color: #2B579A;
-		background: #fff;
 		}
 		.navigation .navbar .navshare i{
 		padding-right: 5px;
 		color: #2B579A;
 		fill: #2B579A;
 		}
-		.indicator {
+		.navigation .navbar .indicator {
   position: absolute;
   display: flex;
   height: 3.5px;
   width: 35px;
-  background-color: #2b579a;
-  border-radius: 20px; 
   transition: left 0.3s ease;
   bottom: 0;
-  margin-left: 78px;
+  margin-left: 0px;
 }
 
 .navigation .navitems .nav-section{
 	display: flex;
 	justify-content: center;
 	font-size: 14px;
-}
-.navigation .navitems .nav-section{
-	padding: 0px 5px 0px 5px; 
-	border-right:1px solid #999;
 }
 .navigation .bottom-title{
 	position: absolute;
@@ -168,53 +152,9 @@ body{
 }
 
 
-.navigation .navitems .clipboard{
-	padding-right: 5px;
-}
-.navigation .navitems .clipboard .paste{
-	display: flex;
-	justify-content: center;
-	width: 55px;
-	padding-left: 5px;
-}
 
-.navigation .navitems .clipboard .paste .paste-icon{
-	position: absolute;
-	font-size: 30px;
-}
-.navigation .navitems .clipboard .paste span{
-	position: absolute;
-	margin-top: 35px;
-	font-size: 12px;
-}
-.navigation .navitems .clipboard .paste .dropdown{
-	position: absolute;
-	margin-top: 55px;
-}
-.navigation .navitems .clipboard ul{
-	margin-left: -5px;
-	width: 120px;
-}
-.navigation .navitems .clipboard ul li{
-	width: fit-content;
-	padding-right: 10px;
-	padding-left: 3px;
-	font-size: 13px;
-	display: flex;
-	align-items: center;
-	margin-top: 3px;
-	cursor: default;
-}
-.navigation .navitems .clipboard ul li:hover{
-	background: #E1DFDD;
-}
-.navigation .navitems .clipboard ul li i{
-	font-size: 17px;
-	padding: 3px;
-}
-
-.navigation .font{
-	border-right: 1px solid #999;
+.navigation .navitems .clipboard .r-padd{
+	padding-left: 10px;
 }
 
 .navigation .font .font-top{
@@ -227,13 +167,10 @@ body{
 .navigation .font .font-top .name{
 	width: 115px;
 	height: 25px;
-	background: #ff1;
 	font-size: 12px;
 	display: flex;
 	align-items: center;
-	background: #fff;
 	padding-left: 3px;
-	border: 1px solid #999;
 }
 .navigation .font .font-top .name .dropdown{
 	position: absolute;
@@ -243,8 +180,6 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: #fff;
-	border: 1px solid #999;
 }
 .navigation .font .font-top .name .dropdown i{
 	transform: scale(0.325);
@@ -252,25 +187,16 @@ body{
 .navigation .font .font-top .size .dropdown i{
 	transform: scale(0.325);
 }
-.navigation .font .font-top .name:hover{
-	border-color: #555;
-}
-.navigation .font .font-top .name:hover .dropdown{
-	border-color: #555;
-	background: #E1DFDD;
-}
+
 
 .navigation .font .font-top .size{
 	margin-left: 3px;
 	width: 42px;
 	height: 25px;
-	background: #ff1;
 	font-size: 12px;
 	display: flex;
 	align-items: center;
-	background: #fff;
 	padding-left: 3px;
-	border: 1px solid #999;
 }
 .navigation .font .font-top .size .dropdown{
 	position: absolute;
@@ -280,16 +206,6 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: #fff;
-	border: 1px solid #999;
-
-}
-.navigation .font .font-top .size:hover{
-	border-color: #555;
-}
-.navigation .font .font-top .size:hover .dropdown{
-	border-color: #555;
-	background: #E1DFDD;
 }
 
 .navigation .font .font-top i{
@@ -297,21 +213,6 @@ body{
 	margin: 2px;
 }
 
-.navigation i:hover{
-	background: var(--border);
-}
-.navigation .font .font-top .divider{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 10px;
-	height: 25px;
-
-}
-.navigation .font .font-top .divider i{
-	font-size: 28px;
-	color: var(--divider);
-}
 
 .navigation .font .font-top .style{
 	font-size: 15px;
@@ -354,36 +255,11 @@ body{
 	padding: 0px;
 	pointer-events: none;
 }
-.navigation .font .font-bottom .divider{
-	width: 10px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.navigation .font .font-bottom .divider i{
-	padding: 0px;
-	font-size: 28px;
-	color: var(--divider);
-}
+
 .navigation .font .font-bottom .subscript i,
 .navigation .font .font-bottom .superscript i{
 	font-size: 15px;
 	padding: 5px;
-}
-.navigation .font .font-bottom .underline{
-	display: flex;
-	align-items: center;
-	border: 1px solid transparent;
-}
-.navigation .font .font-bottom .underline:hover{
-	border: 1px solid var(--border);
-}
-.navigation .font .font-bottom .underline .dropdown{
-	height: 27px;
-}
-.navigation .font .font-bottom .underline .dropdown:hover{
-	height: 27px;
-	background: var(--border);
 }
 
 .navigation .font .font-bottom .color{
@@ -401,38 +277,7 @@ body{
 	background: var(--border);
 }
 
-.navigation .font .font-bottom .color2 .dropdown{
-	height: 27px;
-}
-.navigation .font .font-bottom .color2{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: 1px solid transparent;
-}
-.navigation .font .font-bottom .color2:hover{
-	border-color: var(--border);
-}
-.navigation .font .font-bottom .color2 .dropdown:hover{
-	background: var(--border);
-}
 
-
-.navigation .font .font-bottom .color3 .dropdown{
-	height: 27px;
-}
-.navigation .font .font-bottom .color3{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: 1px solid transparent;
-}
-.navigation .font .font-bottom .color3:hover{
-	border-color: var(--border);
-}
-.navigation .font .font-bottom .color3 .dropdown:hover{
-	background: var(--border);
-}
 
 .navigation .paragraph i{
 	font-size: 18px;
@@ -442,9 +287,7 @@ body{
 	display: flex;
 	align-items: center;
 }
-.navigation .paragraph .paragraph-top .list1,
-.navigation .paragraph .paragraph-top .list2,
-.navigation .paragraph .paragraph-top .list3{
+.navigation .paragraph .paragraph-top .list{
 	display: flex;
 }
 .navigation .paragraph .dropdown{
@@ -479,133 +322,6 @@ body{
 	margin-top: 10px;
 }
 
-.navigation .paragraph .paragraph-top .list1 .dropdown{
-	height: 25px;
-}
-.navigation .paragraph .paragraph-top .list1 .dropdown i{
-	pointer-events: none;
-}
-.navigation .paragraph .paragraph-top .list1{
-	height: 25px;
-	display: flex;
-	align-items: center;
-	border: 1px solid transparent;
-}
-.navigation .paragraph .paragraph-top .list1:hover{
-	border-color: var(--border);
-}
-.navigation .paragraph .paragraph-top .list1 .dropdown:hover{
-	background: var(--border);
-}
-
-
-.navigation .paragraph .paragraph-top .list2 .dropdown{
-	height: 25px;
-}
-.navigation .paragraph .paragraph-top .list2 .dropdown i{
-	pointer-events: none;
-}
-.navigation .paragraph .paragraph-top .list2{
-	height: 25px;
-	display: flex;
-	align-items: center;
-	border: 1px solid transparent;
-}
-.navigation .paragraph .paragraph-top .list2:hover{
-	border-color: var(--border);
-}
-.navigation .paragraph .paragraph-top .list2 .dropdown:hover{
-	background: var(--border);
-}
-
-
-.navigation .paragraph .paragraph-top .list3 .dropdown{
-	height: 25px;
-}
-.navigation .paragraph .paragraph-top .list3 .dropdown i{
-	pointer-events: none;
-}
-.navigation .paragraph .paragraph-top .list3{
-	height: 25px;
-	display: flex;
-	align-items: center;
-	border: 1px solid transparent;
-}
-.navigation .paragraph .paragraph-top .list3:hover{
-	border-color: var(--border);
-}
-.navigation .paragraph .paragraph-top .list3 .dropdown:hover{
-	background: var(--border);
-}
-
-.navigation .paragraph .divider{
-	width: 10px;
-	height: 25px;
-	display: flex;
-	justify-content: center;
-}
-
-.navigation .paragraph .paragraph-bottom .size .dropdown{
-	height: 25px;
-}
-.navigation .paragraph .paragraph-bottom .size .dropdown i{
-	pointer-events: none;
-}
-.navigation .paragraph .paragraph-bottom .size{
-	height: 25px;
-	display: flex;
-	align-items: center;
-	border: 1px solid transparent;
-}
-.navigation .paragraph .paragraph-bottom .size:hover{
-	border-color: var(--border);
-}
-.navigation .paragraph .paragraph-bottom .size .dropdown:hover{
-	background: var(--border);
-}
-
-.navigation .paragraph .paragraph-bottom .color-bucket .dropdown{
-	height: 25px;
-}
-.navigation .paragraph .paragraph-bottom .color-bucket .dropdown i{
-	pointer-events: none;
-}
-.navigation .paragraph .paragraph-bottom .color-bucket{
-	height: 25px;
-	display: flex;
-	align-items: center;
-	border: 1px solid transparent;
-}
-.navigation .paragraph .paragraph-bottom .color-bucket:hover{
-	border-color: var(--border);
-}
-.navigation .paragraph .paragraph-bottom .color-bucket .dropdown:hover{
-	background: var(--border);
-}
-
-.navigation .paragraph .paragraph-bottom .borders .dropdown{
-	height: 25px;
-}
-.navigation .paragraph .paragraph-bottom .borders .dropdown i{
-	pointer-events: none;
-}
-.navigation .paragraph .paragraph-bottom .borders{
-	height: 25px;
-	display: flex;
-	align-items: center;
-	border: 1px solid transparent;
-}
-.navigation .paragraph .paragraph-bottom .borders:hover{
-	border-color: var(--border);
-}
-.navigation .paragraph .paragraph-bottom .borders .dropdown:hover{
-	background: var(--border);
-}
-.navigation .paragraph{
-	border-right: 1px solid #999;
-}
-
-
 
 .navigation .styles{
 	display: flex;
@@ -624,8 +340,6 @@ body{
 .navigation .styles .style-tab ul{
 	display: flex;
 	align-items: center;
-	border: 2px solid #999;
-	padding: 1px;
 }
 .navigation .styles .style-tab ul li{
 	font-size: 14px;
@@ -638,9 +352,7 @@ body{
 	padding: 5px;
 	border: 5px solid transparent;
 }
-.navigation .styles .style-tab ul li:hover{
-	border-color: #999;
-}
+
 .navigation .styles .style-tab ul li a{
 	width:60px;
 	height: 45px;
@@ -655,56 +367,6 @@ body{
 	font-size: 12px;
 	line-height: 12px;
 }
-.navigation .styles{
-	border-right: 1px solid #999;
-}
-
-.navigation .editing ul li i{
-	padding: 2px 5px 2px 2px;
-	font-size: 15px;
-}
-.navigation .editing ul li{
-	padding: 2px 5px 2px 5px;
-	height: 20px;
-	width: 80px;
-	border: 1px solid transparent;
-	margin-top: 3px;
-	font-size: 13px;
-	display: flex;
-	align-items: center;
-}
-.navigation .editing ul li .dropdown{
-	position: absolute;
-	display: flex;
-	margin-left: 70px;
-}
-
-.navigation .editing ul li .dropdown{
-	height: 25px;
-	align-items: center;
-	width: 20px;
-}
-.navigation .editing ul li i{
-	pointer-events: none;
-}
-.navigation .editing ul li .dropdown i{
-	pointer-events: none;
-}
-.navigation .editing ul li{
-	height: 20px;
-	display: flex;
-	align-items: center;
-	border: 1px solid transparent;
-}
-.navigation .editing ul li:hover{
-	border-color: var(--border);
-}
-.navigation .editing ul li .dropdown:hover{
-	background: var(--border);
-}
-.navigation{
-	border-right: 1px solid #999;
-}
 
 .navtab{
 	display: flex;
@@ -714,6 +376,7 @@ body{
 	position: absolute;
 	transition:opacity 0.3s ease;
 	opacity: 1;
+	padding-left: 10px;
 }
 
 .nav-insert{
@@ -754,28 +417,6 @@ body{
 
 
 
-.navigation .nav-insert{
-	font-size: 14px;
-}
-.navigation .pages ul{
-	margin-left: 6px;
-	margin-right: 5px;
-}
-.navigation .pages ul li{
-	font-size: 14px;
-	padding: 0px 3px 0px 4px;
-	width: fit-content;
-	margin-top: 2px;
-}
-.navigation .pages ul li .dropdown{
-	margin-left: 5px;
-}
-
-.navigation .navtab .nav-section .padd i{
-	padding-left: 6px;
-}
-
-
 
 
 
@@ -788,12 +429,10 @@ body{
 	height: 73px;
 	margin-top: 5px;
 }
-.navigation .navtab .nav-section .tab-content:hover{
-	background: var(--border);
-}
 .navigation .navtab .nav-section .tab-content i{
 	font-size: 30px;
 	position: absolute;
+	pointer-events: none;
 }
 .navigation .navtab .nav-section .tab-content .name{
 	margin-top: 35px;
@@ -871,7 +510,6 @@ body{
 	display: flex;
 	width: 1000px;
 	height: 70px;
-	border: 1px solid var(--border);
 	align-items: center;
 	margin-top: 5px;
 	padding-right: 2px;
@@ -885,11 +523,6 @@ body{
 	margin-left: 2px;
 	display: flex;
 	justify-content: center;
-	border: 5px solid transparent;
-}
-.navigation .navtab .nav-section .design-tab li:hover{
-	border: 5px solid #999;
-	background: transparent;
 }
 .navigation .navtab .nav-section .design-tab li .d-title{
 	position: absolute;
@@ -1125,7 +758,7 @@ input[type="range"]::-webkit-slider-thumb {
 	display: flex;
 	width: fit-content;
 	height: 100px;
-	width: 1540px;
+	width: 1535px;
 	position: absolute;
 	transition:opacity 0.3s ease;
 	opacity: 1;
